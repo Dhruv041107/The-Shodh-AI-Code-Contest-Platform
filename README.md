@@ -16,23 +16,23 @@ A full-stack, Dockerized coding contest platform that simulates live coding even
 
 ## 🏗️ Architecture
 
-**Frontend (Next.js)**
-└── Pages: `/join`, `/contest`
-    └── Features:
-        - Code Editor (Monaco)
-        - Real-time Polling (Leaderboard, Submissions)
-        ↓
-**REST API (JSON)**
-    ↓
-**Backend (Spring Boot)**
-    ├── REST Endpoints
-    ├── Persistence: H2 / MySQL
-    ├── Docker Orchestration
-    ↓
-**Judge Container (OpenJDK 17)**
-    ├── Executes user code safely
-    ├── Compares I/O results
-    └── Auto-cleans container after execution
+- **Frontend (Next.js)**
+  - `/join`, `/contest` pages
+  - In-browser code editor (Monaco)
+  - Leaderboard auto-refresh via polling
+  - Communicates via REST API (JSON)
+
+- **Backend (Spring Boot)**
+  - Provides REST endpoints for contests & submissions
+  - Uses H2/MySQL database for persistence
+  - Handles Docker orchestration for code execution
+
+- **Judge Container (OpenJDK 17)**
+  - Runs user-submitted code securely
+  - Compares input/output with test cases
+  - Enforces resource limits (CPU, Memory)
+  - Auto-removes container after execution
+
 
 
 

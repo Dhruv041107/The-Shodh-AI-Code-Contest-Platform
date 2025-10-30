@@ -57,8 +57,8 @@ A full-stack, Dockerized coding contest platform that simulates live coding even
 
 ### ▶️ Run Everything
 ```bash
-git clone https://github.com/<yourusername>/shodh-a-code
-cd shodh-a-code
+git clone https://github.com/Dhruv041107/The-Shodh-AI-Code-Contest-Platform
+cd The-Shodh-AI-Code-Contest-Platform
 docker-compose up --build
 
 
